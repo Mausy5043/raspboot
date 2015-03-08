@@ -30,7 +30,7 @@ case "$CLNT" in
             ./17-get-electra.py
             ;;
   rbian )   echo "Raspberry testbench"
-            #./testserial.py &
+            # ./testserial.py &
             ;;
   * )       echo "!! undefined client !!"
             ;;
