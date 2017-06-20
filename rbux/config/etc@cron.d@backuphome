@@ -1,2 +1,2 @@
 # m h dom mon dow user  command
-00  23 *  *   *   pi    sleep $(echo $RANDOM/9 | bc); $HOME/bin/backuphome.sh | logger -p local7.info -t backuphome
+00  23 *  *   *   pi    perl -le 'sleep rand 3600'; $HOME/bin/backuphome.sh | logger -p local7.info -t backuphome
