@@ -34,9 +34,9 @@ mkdir -m 0755 -p $HOME/bin
 # Add mountpoints to /etc/fstab
 echo "Adding mountpoints to /etc/fstab ..."
 echo '# mountpoint for NFS on /mnt/media'  | sudo tee --append /etc/fstab
-echo 'boson.lan:/srv/array1/video    /mnt/media     nfs  defaults,user,noatime,intr,_netdev,x-systemd.automount,noauto    0    0'  | sudo tee --append /etc/fstab
+echo 'boson:/srv/array1/video    /mnt/media     nfs  defaults,user,noatime,intr,_netdev,x-systemd.automount,noauto    0    0'  | sudo tee --append /etc/fstab
 echo '# mountpoint for systemlogs and backups'  | sudo tee --append /etc/fstab
-echo 'boson.lan:/srv/array1/backup   /mnt/backup    nfs4  nouser,atime,rw,dev,exec,suid,noauto,intr,_netdev    0    0'  | sudo tee --append /etc/fstab
+echo 'boson:/srv/array1/backup   /mnt/backup    nfs4  nouser,atime,rw,dev,exec,suid,noauto,intr,_netdev    0    0'  | sudo tee --append /etc/fstab
 echo 'tmpfs    /tmp        tmpfs    nodev,nosuid,size=64M,mode=1777    0    0'  | sudo tee --append /etc/fstab
 echo 'tmpfs    /var/log    tmpfs    defaults,noatime,nosuid,mode=0755,size=96M    0    0'  | sudo tee --append /etc/fstab
 
