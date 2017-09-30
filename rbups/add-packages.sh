@@ -17,8 +17,7 @@ install_package()
 }
 
 echo "Installing UPS monitor packages..."
-install_package "nut-client"
-install_package "nut-server"
+install_package "nut"
 install_package "graphviz"
 
 #echo "Installing CUPS packages..."
