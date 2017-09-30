@@ -5,6 +5,7 @@ echo "UPS monitor installation..."
 git clone https://github.com/Mausy5043/upsdiagd.git $HOME/upsdiagd
 # set permissions
 chmod -R 0755 $HOME/upsdiagd
+echo "v2" > $HOME/.upsdiagd.branch
 pushd $HOME/upsdiagd
   ./install.sh
 popd
