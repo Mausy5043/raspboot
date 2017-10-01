@@ -30,7 +30,11 @@ pushd $HOME/raspboot
               ;;
     osmc )    echo "OSMC Media Center"
               ;;
+    rbux)     echo "Pi Testbench"
+              ;;
     rbux3)    echo "Pi3 Testbench"
+              ;;
+    rbtor3)   echo "Toreador"
               ;;
     * )       echo "!! undefined client !!"
               ;;
