@@ -1,3 +1,5 @@
+echo "Set permissions... [nut]"
+sudo chmod 0640 /etc/nut/*
 
 echo "Modify /boot/config.txt "
 # Scaled CPU frequency
