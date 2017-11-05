@@ -36,6 +36,8 @@ pushd $HOME/raspboot
               ;;
     rbtor3)   echo "Toreador"
               ;;
+    rbpihole) echo "Pi-hole DNS"
+              ;;
     * )       echo "!! undefined client !!"
               ;;
   esac
