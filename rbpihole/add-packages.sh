@@ -16,5 +16,9 @@ install_package()
   fi
 }
 
-echo "Installing additional Python packages..."
+echo "Installing additional packages..."
 install_package "graphviz"
+install_package "php"
+install_package "php-common"
+install_package "php-cgi"
+install_package "php-sqlite3"
