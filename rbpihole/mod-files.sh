@@ -18,3 +18,5 @@ echo "force_turbo=0"            | sudo tee -a /boot/config.txt
 echo "temp_limit=70"            | sudo tee -a /boot/config.txt
 
 echo "[OK]"
+
+sudo git clone --depth 1 -b development https://github.com/pi-hole/pi-hole.git /etc/.pihole
