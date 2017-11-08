@@ -22,3 +22,5 @@ echo "[OK]"
 sudo git clone --depth 1 https://github.com/pi-hole/pi-hole.git /etc/.pihole
 sudo mkdir /etc/pihole
 sudo cp /home/pi/bin/etc@pihole@setupVars.conf /etc/pihole/setupVars.conf
+cd "/etc/.pihole/automated install/"
+sudo ./basic-install.sh --unattended
