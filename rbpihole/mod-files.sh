@@ -19,5 +19,5 @@ echo "temp_limit=70"            | sudo tee -a /boot/config.txt
 
 echo "[OK]"
 
-sudo git clone --depth 1 -b development https://github.com/pi-hole/pi-hole.git /etc/.pihole
+sudo git clone --depth 1 https://github.com/pi-hole/pi-hole.git /etc/.pihole
 sudo cp /home/pi/bin/etc@pihole@setupVars.conf /etc/pihole/setupVars.conf
