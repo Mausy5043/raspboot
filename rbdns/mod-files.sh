@@ -21,5 +21,5 @@ echo "[OK]"
 
 echo "Modify DNSMASQ installation"
 sudo sed -i 's/^#conf-dir=\/etc\/dnsmasq.d$/conf-dir=\/etc\/dnsmasq.d/' /etc/dnsmasq.conf
-sudo sed -i 's/^iface wlan0 inet dhcp/iface wlan0 inet 192\.168\.178\.6/' /etc/network/interfaces
-sudo sed -i 's/^iface eth0 inet dhcp/iface eth0 inet 192\.168\.178\.3/' /etc/network/interfaces
+#sudo sed -i 's/^iface wlan0 inet dhcp/iface wlan0 inet 192\.168\.178\.6/' /etc/network/interfaces
+#sudo sed -i 's/^iface eth0 inet dhcp/iface eth0 inet 192\.168\.178\.3/' /etc/network/interfaces
