@@ -18,3 +18,6 @@ echo "force_turbo=0"            | sudo tee -a /boot/config.txt
 echo "temp_limit=70"            | sudo tee -a /boot/config.txt
 
 echo "[OK]"
+
+echo "Modify DNSMASQ installation"
+sed -i 's/^#conf-dir=\/etc\/dnsmasq.d$/conf-dir=\/etc\/dnsmasq.d/' /etc/dnsmasq.conf
