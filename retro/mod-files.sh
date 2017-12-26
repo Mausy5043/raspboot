@@ -18,3 +18,11 @@ echo "force_turbo=0"            | sudo tee -a /boot/config.txt
 echo "temp_limit=72"            | sudo tee -a /boot/config.txt
 
 echo "[OK]"
+
+echo "Verify locale:"
+locale
+
+cd RetroPie-Setup
+chmod +x retropie_setup.sh
+
+echo "MANUAL INSTALLATION OF RETROPIE REQUIRED!!!"

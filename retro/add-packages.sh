@@ -18,3 +18,5 @@ install_package()
 
 echo "Installing additional Python packages..."
 install_package "graphviz"
+
+git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
