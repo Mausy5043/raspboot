@@ -14,11 +14,11 @@ if [ ! -e /var/log/lastlog ]; then
 fi
 
 if [ ! -f $HOME/.my.cnf ]; then
-  cp -rv  $HOME/bin/.my.cnf $HOME/
+  cp -rv  $HOME/bin/.config/.my.cnf $HOME/
   chmod    0740 $HOME/.my.cnf
 fi
 if [ ! -f $HOME/.netrc ]; then
-  cp -rv  $HOME/bin/.netrc  $HOME/
+  cp -rv  $HOME/bin/.config/.netrc  $HOME/
   chmod    0600 $HOME/.netrc
 fi
 
