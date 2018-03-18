@@ -13,18 +13,25 @@ if [ ! -e /var/log/lastlog ]; then
   sudo chmod 664 /var/log/lastlog
 fi
 
-if [ ! -f $HOME/.my.cnf ]; then
-  cp -rv  $HOME/bin/.config/home/.my.cnf $HOME/
-  chmod    0740 $HOME/.my.cnf
+getfilefromserver() {
+file="${1}"
+mode="${2}"
+
+if [ ! -f "$HOME/${file}" ]; then
+  cp -rv  "$HOME/bin/.config/home/${file}" "$HOME/"
+  chmod    "${mode}" "$HOME/${file}"
 fi
-if [ ! -f $HOME/.netrc ]; then
-  cp -rv  $HOME/bin/.config/home/.netrc  $HOME/
-  chmod    0600 $HOME/.netrc
-fi
-if [ ! -f $HOME/.lftprc ]; then
-  cp -rv  $HOME/bin/.config/home/.lftprc  $HOME/
-  chmod    0640 $HOME/.lftprc
-fi
+}
+
+getfilefromserver ".bashrc" "0644"
+getfilefromserver ".dircolors" "0755"
+getfilefromserver ".lftprc" "0640"
+getfilefromserver ".my.cnf" "0740"
+getfilefromserver ".netrc" "0600"
+getfilefromserver ".profile" "0644"
+getfilefromserver ".screenrc" "0755"
+
+
 echo "Boot detection mail... "$(date)
 $HOME/bin/bootmail.py
 
