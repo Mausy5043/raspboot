@@ -21,7 +21,10 @@ if [ ! -f $HOME/.netrc ]; then
   cp -rv  $HOME/bin/.config/home/.netrc  $HOME/
   chmod    0600 $HOME/.netrc
 fi
-
+if [ ! -f $HOME/.lftprc ]; then
+  cp -rv  $HOME/bin/.config/home/.lftprc  $HOME/
+  chmod    0640 $HOME/.lftprc
+fi
 echo "Boot detection mail... "$(date)
 $HOME/bin/bootmail.py
 
