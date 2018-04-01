@@ -6,6 +6,9 @@
 CLNT=$(hostname)
 ME=$(whoami)
 
+echo -n "post-boot script started on: "
+date
+
 # /var/log is on tmpfs so recreate lastlog now
 if [ ! -e /var/log/lastlog ]; then
   sudo touch /var/log/lastlog
