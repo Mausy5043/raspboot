@@ -26,15 +26,6 @@ mode="${2}"
 #fi
 }
 
-getfilefromserver ".bashrc" "0644"
-getfilefromserver ".dircolors" "0755"
-getfilefromserver ".lftprc" "0640"
-getfilefromserver ".my.cnf" "0740"
-getfilefromserver ".netrc" "0600"
-getfilefromserver ".profile" "0644"
-getfilefromserver ".screenrc" "0755"
-
-
 echo "Boot detection mail... "$(date)
 $HOME/bin/bootmail.py
 
@@ -44,6 +35,14 @@ $HOME/bin/bootmail.py
 if [ ! -e $HOME/.firstboot ]; then
   echo -n "First boot detected on "
   date
+
+  getfilefromserver ".bashrc" "0644"
+  getfilefromserver ".dircolors" "0755"
+  getfilefromserver ".lftprc" "0640"
+  getfilefromserver ".my.cnf" "0740"
+  getfilefromserver ".netrc" "0600"
+  getfilefromserver ".profile" "0644"
+  getfilefromserver ".screenrc" "0755"
 
   # 1. Update the system
   echo "Updating..."
