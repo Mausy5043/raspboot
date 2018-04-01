@@ -21,7 +21,7 @@ file="${1}"
 mode="${2}"
 
 #if [ ! -f "$HOME/${file}" ]; then
-  cp -rv  "$HOME/bin/.config/home/${file}" "$HOME/"
+  cp -rvf  "$HOME/bin/.config/home/${file}" "$HOME/"
   chmod    "${mode}" "$HOME/${file}"
 #fi
 }
